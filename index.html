@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Alternate Universe</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Dream World Life Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="landing">
-    <h1>Enter Your Alternate Universe</h1>
-    <button onclick="startSimulation()">🚀 Begin Journey</button>
+  <!-- Portal Effect -->
+  <div class="portal-wrapper">
+    <img src="images/portal.gif" alt="Portal" class="portal-gif">
+    <h1 class="portal-text">Entering the Future...</h1>
   </div>
 
-  <div class="section travel hidden">
-    <h2>🌌 Future Travel Simulator</h2>
-    <p>Preparing your ship to launch...</p>
-    <div class="boarding-pass" id="boardingPass"></div>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Future Travel Simulator</h1>
+      <p>Step into dream worlds & design your future life</p>
+      <button onclick="startJourney()">Start Journey</button>
+    </div>
+  </section>
 
-  <div class="section world hidden">
-    <h2>🌍 Dream World Generated</h2>
-    <div id="worldDetails"></div>
-  </div>
+  <!-- Life Dashboard -->
+  <section class="dashboard" id="dashboard">
+    <h2>Your Dream Dashboard</h2>
+    <div class="avatar-box">
+      <img src="images/avatar1.png" alt="Your Avatar" class="avatar" />
+      <p>Welcome, Dream Explorer</p>
+    </div>
+    <div class="stats">
+      <div class="card">🌍 World: Atlantis Prime</div>
+      <div class="card">🕰️ Year: 3099</div>
+      <div class="card">💼 Role: Neural Architect</div>
+      <div class="card">🧠 Mood: Ultra Flow</div>
+    </div>
+  </section>
 
-  <div class="section dashboard hidden">
-    <h2>🎮 Your Life Dashboard</h2>
-    <div id="lifeStats"></div>
-  </div>
-
-  <script src="script.js"></script>
+  <script>
+    function startJourney() {
+      document.querySelector('.portal-wrapper').style.display = 'none';
+      document.querySelector('.dashboard').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
