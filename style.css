@@ -125,7 +125,7 @@ body {
 
 .portal-gif {
   width: 200px;
-  height: auto;
+  height: 200px;
   margin-bottom: 20px;
   filter: drop-shadow(0 0 20px cyan);
 }
